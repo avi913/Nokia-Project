@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Initialize') {
+        stage('Initialize git repo') {
             steps {
-                echo "Initializing build for branch: ${env.BRANCH_NAME}"
+                echo "Initializing build for branch from the: ${env.BRANCH_NAME}"
             }
         }
 
         stage('Build') {
             steps {
-                echo " Building the application..."
+                echo " Building the application from multibranch"
             }
         }
     }
